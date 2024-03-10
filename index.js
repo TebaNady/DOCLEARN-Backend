@@ -11,11 +11,7 @@ const app = express();
 
 const port = 4000;
 
-app.use(cors({
-    origin: ["https://doclearn-exam-po61.vercel.app"],
-    methods: ["POST", "GET"],
-    credentials: true
-})); //?app.use(cors({ origin: "*" })); allows all requests from anywhere to my server
+app.use(cors()); //?app.use(cors({ origin: "*" })); allows all requests from anywhere to my server
 //Start a connection to DB
 initConnection();
 
