@@ -106,7 +106,7 @@ async function createOrder(token) {
     const data = {
         "auth_token": token,
         "delivery_needed": "false",
-        "amount_cents": "0",
+        "amount_cents": "",
         "currency": "EGP",
         "items": []
     };
@@ -123,7 +123,7 @@ async function createOrder(token) {
 async function generatePaymentToken(token, orderId) {
     const data = {
         "auth_token": token,
-        "amount_cents": "0",
+        "amount_cents": 1500,
         "expiration": 3600,
         "order_id": orderId,
         "billing_data": {
